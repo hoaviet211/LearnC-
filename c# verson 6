@@ -1,0 +1,9 @@
+* Static imports
+* Exception filters
+* Auto-property initializers
+* Expression bodied members
+* Null propagator
+* String interpolation
+* nameof operator
+1 Static import:
+	
