@@ -6,4 +6,17 @@
 * String interpolation
 * nameof operator
 1 Static import:
-	
+	access without specifying a type name 
+	using System;
+	public double Area
+   	{
+      		get { return Math.PI * Math.Pow(Radius, 2); }
+   	}
+	----
+	using System;
+	using static System.Math;
+	public double Area
+	{
+	      get { return PI * Pow(Radius, 2); }
+	}
+2 Exception filters
