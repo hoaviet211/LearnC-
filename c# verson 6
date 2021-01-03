@@ -20,3 +20,23 @@
 	      get { return PI * Pow(Radius, 2); }
 	}
 2 Exception filters
+	You can use the when contextual keyword to specify a filter condition in the following contexts:
+	In the catch statement of a try/catch or try/catch/finally block.
+	In the case label of a switch statement.
+	In the switch expression.
+	try
+        {
+            var responseText = await streamTask;
+            return responseText;
+        }
+        catch (HttpRequestException e) when (e.Message.Contains("301"))
+        {
+            return "Site Moved";
+        }
+	-------------------
+	switch (obj)
+      {
+         case Shape shape when shape.Area == 0:
+            Console.WriteLine($"The shape: {shape.GetType().Name} with no dimensions");
+            break;
+	}	
