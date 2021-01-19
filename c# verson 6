@@ -33,10 +33,26 @@
         {
             return "Site Moved";
         }
-	-------------------
+	-------------------just >=c#7.0
 	switch (obj)
       {
          case Shape shape when shape.Area == 0:
             Console.WriteLine($"The shape: {shape.GetType().Name} with no dimensions");
             break;
 	}	
+3 Auto-property initializers
+-Could intitial a value for property in the class 
+pulic class A{
+	public string Name {get;set}="Name example"
+}
+- use single expresstion and is readonly property.
+public class Person
+{
+    public string FirstName
+    {
+        get => firstName;
+        set => firstName = value;
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
